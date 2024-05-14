@@ -30,7 +30,7 @@ github_username: PaoAndreCM
 # Build settings
 # theme: minima
 
-remote_theme: jekyll-theme-cayman
+theme: jekyll-theme-cayman
 
 plugins: # TODO figure out what this does!
   # - jekyll-feed
