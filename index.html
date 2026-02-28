@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Paola A. Carreno M.</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Paola A. Carreno M.</h1>
+  <p>Information Engineer</p>
+
+  <h2>Projects</h2>
+
+  <div class="project">
+    <h3>Thesis: Transformer Network for the Forecasting of Energy Consumption</h3>
+    <h4>Training and assessment of a transformer-based neural network to forecast Germany's Grid Load.</h4>
+    <p>Forecasting electricity consumption is paramount to keep the grid operational in an efficient manner. Forecast too much, and there is waste of energy. Forecast too little, and there may be devastating consequences such as blackouts. Traditionally, energy consumption forecasting has been done using statistical methods. Given the importance of electricity forecasting, any tool that promises to improve forecast accuracy should be added to the experts' arsenal.</p>
+    <p>With the popularization of neural networks and widespread availability of data in our information era, forecasting can now be done with machine learning.</p>
+    <p>The Transformer architecture is behind powerful LLMs such as chatGPT and claude. Given the success of these networks at "next-word" prediction, their use at time-series forecasting seemed promising. Nonetheless, the vanilla transformer architecture's performance was found to be underwhelming. Several adaptations have been made to achieve better accuracy, with <em>PatchTST</em> being the best performing architecture found in the literature.</p>
+    <p>PatchTST, which stands for "Patch Time-Series Transformer", is a transformer-based architecture which uses patches of the input sequence as tokens, rather than individual data points. This allows the network to have more context to enrich embeddings when attention is performed. Additionally, PatchTST uses only the encoder part of the vanilla transformer, generating all outputs at once, without the recurrent nature of the transformer decoder.</p>
+    <p>For this study, 45 networks were trained under different configurations. Overall, PatchTST was found to be a robust architecture with accurate predictions, with the best performing network generating predictions within 2.7% of the true values.</p>
+    <a href="https://github.com/PaoAndreCM/Thesis">GitHub</a>
+  </div>
+
+  <!-- <div class="project">
+    <h3>Project 2</h3>
+    <p>Short description.</p>
+    <a href="#">Live Demo</a>
+  </div> -->
+
+</body>
+</html>
