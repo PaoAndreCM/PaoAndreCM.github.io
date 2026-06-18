@@ -193,12 +193,12 @@ import Layout from '../layouts/Layout.astro';
   </article>
 </Layout>
 
-<style>
+<style is:global>
   @media print {
     .no-print {
       display: none;
     }
-    nav {
+    header {
       display: none;
     }
     article {
