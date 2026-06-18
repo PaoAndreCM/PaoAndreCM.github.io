@@ -4,6 +4,7 @@ summary: "Trained 45 transformer-based models to forecast Germany's electricity 
 status: published
 order: 1
 context: "Bachelor Thesis — HAW Hamburg"
+cover: "/images/thesis.png" 
 links:
   github: "https://github.com/PaoAndreCM/Thesis"
 tech:

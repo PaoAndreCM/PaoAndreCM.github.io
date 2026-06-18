@@ -12,7 +12,7 @@ export async function getStaticPaths() {
 
 const { project } = Astro.props;
 const { Content } = await render(project);
-const { title, summary, context, cover, tech, hard_skills, soft_skills, links } = project.data;
+const { title, summary, context, tech, hard_skills, soft_skills, links } = project.data;
 ---
 
 <Layout title={`${title} — Paola Carreno`}>
@@ -25,12 +25,7 @@ const { title, summary, context, cover, tech, hard_skills, soft_skills, links } 
       <p class="text-lg text-gray-600">{summary}</p>
     </div>
 
-    <!-- Cover image -->
-    {cover && (
-      <div class="mb-10 rounded-lg overflow-hidden">
-        <img src={cover} alt={title} class="w-full object-cover max-h-96" />
-      </div>
-    )}
+    <!-- Images on the project page go directly in the markdown body below -->
 
     <!-- Skills & links -->
     <div class="grid grid-cols-3 gap-4 mb-12 p-6 bg-gray-50 rounded-lg">

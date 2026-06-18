@@ -13,7 +13,8 @@ interface Props {
 const { title, summary, context, cover, tech, hard_skills, soft_skills, slug } = Astro.props;
 ---
 
-<article class="grid grid-cols-3 border border-gray-200 rounded-lg overflow-hidden min-h-64">
+<article class="relative grid grid-cols-3 border border-gray-200 rounded-lg overflow-hidden min-h-64 hover:border-gray-400 transition-colors">
+  <a href={`/projects/${slug}`} class="absolute inset-0 z-0" aria-label={`Learn more about ${title}`}></a>
 
   <!-- Left: cover image -->
   <div class="col-span-1 bg-gray-100 flex items-center justify-center overflow-hidden">
@@ -67,7 +68,7 @@ const { title, summary, context, cover, tech, hard_skills, soft_skills, slug } =
     <div class="p-4 flex items-center justify-center">
       <a
         href={`/projects/${slug}`}
-        class="text-sm font-medium text-gray-900 hover:underline underline-offset-4"
+        class="relative z-10 text-sm font-medium text-gray-900 hover:underline underline-offset-4"
       >
         Learn more →
       </a>

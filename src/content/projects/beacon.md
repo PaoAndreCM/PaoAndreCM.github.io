@@ -46,3 +46,5 @@ The team of four worked relatively flat — everyone owned their piece and trust
 The final system was demonstrated live at LSBG (Landesbetrieb Straßen, Brücken und Gewässer — Hamburg's infrastructure agency). The professor's team integrated our beacon output array into their ROS node and web application. A car equipped with the ladybug camera drove past construction beacons while the audience watched a live map: markers appearing at each detected beacon's location, with its ID and GPS coordinates listed below the map.
 
 *The photo below was taken at the LSBG presentation — it shows the live demo display, with beacon markers on the map and the list of identified beacons beneath it.*
+
+![LSBG demo presentation](/images/beacon-lsbg-demo.jpeg)  

@@ -4,6 +4,7 @@ summary: "Deployed the best-performing model from my thesis as a live web applic
 status: published
 order: 2
 context: "Personal project"
+cover: "/images/hf-app.png" 
 links:
   github: "https://github.com/PaoAndreCM/energy-forecast-app"
   demo: "https://huggingface.co/spaces/PaoAndreCM/energy-forecast-app"
