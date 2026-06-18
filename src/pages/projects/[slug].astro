@@ -1,0 +1,94 @@
+---
+import { getCollection, render } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+
+export async function getStaticPaths() {
+  const projects = await getCollection('projects');
+  return projects.map(project => ({
+    params: { slug: project.id },
+    props: { project },
+  }));
+}
+
+const { project } = Astro.props;
+const { Content } = await render(project);
+const { title, summary, context, cover, tech, hard_skills, soft_skills, links } = project.data;
+---
+
+<Layout title={`${title} — Paola Carreno`}>
+  <article class="max-w-4xl mx-auto px-6 py-16">
+
+    <!-- Header -->
+    <div class="mb-10">
+      {context && <p class="text-sm text-gray-400 uppercase tracking-wide mb-2">{context}</p>}
+      <h1 class="text-3xl font-bold mb-4">{title}</h1>
+      <p class="text-lg text-gray-600">{summary}</p>
+    </div>
+
+    <!-- Cover image -->
+    {cover && (
+      <div class="mb-10 rounded-lg overflow-hidden">
+        <img src={cover} alt={title} class="w-full object-cover max-h-96" />
+      </div>
+    )}
+
+    <!-- Skills & links -->
+    <div class="grid grid-cols-3 gap-4 mb-12 p-6 bg-gray-50 rounded-lg">
+      <div>
+        <p class="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2">Tech</p>
+        <div class="flex flex-wrap gap-1">
+          {tech.map(tag => (
+            <span class="bg-gray-200 text-gray-700 text-xs px-2 py-0.5 rounded-full">{tag}</span>
+          ))}
+        </div>
+      </div>
+      <div>
+        <p class="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2">Hard skills</p>
+        <div class="flex flex-wrap gap-1">
+          {hard_skills.map(tag => (
+            <span class="bg-blue-100 text-blue-700 text-xs px-2 py-0.5 rounded-full">{tag}</span>
+          ))}
+        </div>
+      </div>
+      <div>
+        <p class="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2">Soft skills</p>
+        <div class="flex flex-wrap gap-1">
+          {soft_skills.map(tag => (
+            <span class="bg-emerald-100 text-emerald-700 text-xs px-2 py-0.5 rounded-full">{tag}</span>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    <!-- Links -->
+    {links && (
+      <div class="flex gap-4 mb-12">
+        {links.github && (
+          <a href={links.github} target="_blank" rel="noopener noreferrer"
+            class="text-sm font-medium border border-gray-300 px-4 py-2 rounded hover:bg-gray-50 transition-colors">
+            View on GitHub →
+          </a>
+        )}
+        {links.demo && (
+          <a href={links.demo} target="_blank" rel="noopener noreferrer"
+            class="text-sm font-medium bg-gray-900 text-white px-4 py-2 rounded hover:bg-gray-700 transition-colors">
+            Live demo →
+          </a>
+        )}
+      </div>
+    )}
+
+    <!-- Body content -->
+    <div class="prose prose-gray max-w-none">
+      <Content />
+    </div>
+
+    <!-- Back link -->
+    <div class="mt-16 pt-8 border-t border-gray-200">
+      <a href="/projects" class="text-sm text-gray-500 hover:text-gray-900 transition-colors">
+        ← Back to projects
+      </a>
+    </div>
+
+  </article>
+</Layout>
