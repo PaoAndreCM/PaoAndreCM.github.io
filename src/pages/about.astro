@@ -3,8 +3,97 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="About me — Paola Carreno">
-  <section class="max-w-4xl mx-auto px-6 py-24">
-    <h1 class="text-3xl font-bold mb-12">About me</h1>
-    <!-- About content to be built in later tasks -->
-  </section>
+  <article class="max-w-4xl mx-auto px-6 py-16">
+
+    <!-- Header with photo -->
+    <div class="flex flex-col md:flex-row gap-10 items-start mb-14">
+      <div class="shrink-0">
+        <img
+          src="/images/paola.png"
+          alt="Paola Carreno"
+          class="w-48 h-48 rounded-full object-cover bg-gray-100"
+          onerror="this.style.display='none'"
+        />
+      </div>
+      <div class="flex flex-col justify-center">
+        <h1 class="text-3xl font-bold mb-3">About me</h1>
+        <p class="text-lg text-gray-600 leading-relaxed">
+          Engineer. Former English teacher. Perpetual student. Based in Hamburg, originally from Colombia.
+          I came to engineering late — and I think that makes me better at it.
+        </p>
+      </div>
+    </div>
+
+    <!-- Main narrative -->
+    <div class="prose prose-gray max-w-none space-y-6 text-gray-700 leading-relaxed">
+
+      <div>
+        <h2 class="text-xl font-semibold text-gray-900 mb-3">An unusual path</h2>
+        <p>
+          I spent over ten years as an English teacher in Colombia — at universities, language institutes, and eventually as a certified Cambridge and IELTS speaking examiner. I was good at it, and I loved it. But I had always been drawn to science, and at some point I decided I wanted a real challenge. So I packed up, moved to Hamburg on my own, and enrolled in Information Engineering at HAW Hamburg.
+        </p>
+        <p class="mt-4">
+          I'm not leaving teaching behind — I'm bringing it forward. Everything I learned about how people understand things, how misconceptions form, how to build a bridge from confusion to clarity: that's not a soft skill addendum to my engineering work. It <em>is</em> part of my engineering work. When I explain a technical concept to a non-technical stakeholder, I'm not dumbing it down — I'm doing something genuinely difficult, and I've been practicing it for over a decade.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-xl font-semibold text-gray-900 mb-3 mt-8">Why engineering</h2>
+        <p>
+          At some point during my degree, something clicked. I realized I now understood how a computer works — not just in the abstract "there are ones and zeros" sense, but from the transistor level up. I know how current flows through a MOSFET. I know how MOSFETs are combined into NAND and XOR gates. I know how those gates build flip-flops, how flip-flops store state in binary, how processors access that state, and how an entire operating system is built on top of all of it — the same OS that's running right now as I type this. That realization never got old. It still doesn't.
+        </p>
+        <p class="mt-4">
+          My work so far has leaned toward data engineering, analytics, and machine learning. But what I really want is to work closer to the hardware — in the space where signals meet silicon, where the software has to know what the hardware is actually doing. Medical devices, instrumentation, embedded systems. Ideally somewhere at the intersection of all of it.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-xl font-semibold text-gray-900 mb-3 mt-8">Hamburg</h2>
+        <p>
+          I came here for the degree and stayed for everything else. I fund my own life here — and at times help my family back in Colombia — which has made the challenge real in ways that go beyond coursework. But it has also made it meaningful. I love this city: the Alster, the Alsterpark, Jungfernstieg on a grey Tuesday morning. I go on walks there regularly. Hamburg has given me exactly what I came looking for: a challenge worth taking on, and a reason to keep going.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-xl font-semibold text-gray-900 mb-3 mt-8">How I work</h2>
+        <p>
+          I'm the person who wants to understand things properly. Not just well enough to pass, but from first principles. I'd rather sit with a concept until it makes sense than move on with a shaky foundation. I'm aware I don't know everything — and I genuinely enjoy being around people who know more than me. That's not modesty; it's how I learn fastest.
+        </p>
+        <p class="mt-4">
+          Colleagues and students have consistently told me that my energy is contagious and that I'm easy to understand. I take both seriously. I want the people around me to leave a conversation clearer than they entered it.
+        </p>
+        <p class="mt-4">
+          A few years ago I noticed that social media had eroded my ability to focus — I was training myself to concentrate for five seconds at a time. I deleted it all and built back deliberately: Pomodoro, working from the library, setting real deadlines. Focus is a skill, and I treat it like one.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-xl font-semibold text-gray-900 mb-3 mt-8">Currently reading</h2>
+        <p>
+          I gravitate toward books at the intersection of technology, humanity, and cognition.
+          Right now I'm working through <em>Life 3.0: Being Human in the Age of Artificial Intelligence</em> by Max Tegmark,
+          <em>Homo Deus</em> by Yuval Noah Harari, and <em>How to Know a Person</em> by David Brooks.
+          I have a slight habit of not finishing books once I feel I've understood the core argument — something I'm working on.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- English for Techies -->
+    <div class="mt-14 p-8 bg-gray-50 rounded-lg border border-gray-200">
+      <h2 class="text-xl font-semibold text-gray-900 mb-3">English for Techies with Pao</h2>
+      <p class="text-gray-600 leading-relaxed mb-4">
+        A side project that brings my two worlds together. Engineers are often brilliant at what they do and struggle to communicate it — to teammates, to stakeholders, to non-technical audiences. I've built a set of modules covering exactly that: presenting technical work, explaining complex concepts simply, navigating professional communication in English. Registered as a freelance initiative, with material developed for several modules and more in progress.
+      </p>
+      <a
+        href="https://english-for-techies-with-pao.netlify.app/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-block text-sm font-medium border border-gray-300 px-4 py-2 rounded hover:bg-white transition-colors"
+      >
+        Visit English for Techies →
+      </a>
+    </div>
+
+  </article>
 </Layout>

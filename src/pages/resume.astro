@@ -3,8 +3,206 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Resume — Paola Carreno">
-  <section class="max-w-4xl mx-auto px-6 py-24">
-    <h1 class="text-3xl font-bold mb-12">Resume</h1>
-    <!-- Resume content to be built in later tasks -->
-  </section>
+
+  <!-- Print button (hidden when printing) -->
+  <div class="no-print max-w-4xl mx-auto px-6 pt-10 flex justify-end">
+    <button
+      onclick="window.print()"
+      class="text-sm font-medium border border-gray-300 px-4 py-2 rounded hover:bg-gray-50 transition-colors flex items-center gap-2"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6.72 13.829c-.24.03-.48.062-.72.096m.72-.096a42.415 42.415 0 0110.56 0m-10.56 0L6.75 19.817m.72-5.988a42.415 42.415 0 0110.56 0m0 0l.72 5.988M5.25 9.75h13.5M5.25 9.75A2.25 2.25 0 013 7.5V6a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 6v1.5a2.25 2.25 0 01-2.25 2.25m-13.5 0v7.5A2.25 2.25 0 007.5 19.5h9a2.25 2.25 0 002.25-2.25v-7.5" />
+      </svg>
+      Print / Save as PDF
+    </button>
+  </div>
+
+  <article class="max-w-4xl mx-auto px-6 py-10 print:py-0 print:px-0">
+
+    <!-- Header -->
+    <header class="mb-8 pb-6 border-b border-gray-200">
+      <h1 class="text-3xl font-bold mb-1">Paola A. Carreno M.</h1>
+      <p class="text-gray-500 mb-4">Information Engineer</p>
+      <div class="flex flex-wrap gap-x-6 gap-y-1 text-sm text-gray-600">
+        <a href="mailto:paola.a.carr@gmail.com" class="hover:text-black">paola.a.carr@gmail.com</a>
+        <a href="https://paoandrecm.github.io" target="_blank" rel="noopener noreferrer" class="hover:text-black">paoandrecm.github.io</a>
+        <a href="https://github.com/PaoAndreCM" target="_blank" rel="noopener noreferrer" class="hover:text-black">github.com/PaoAndreCM</a>
+        <a href="https://www.linkedin.com/in/paoandrecm" target="_blank" rel="noopener noreferrer" class="hover:text-black">linkedin.com/in/paoandrecm</a>
+      </div>
+    </header>
+
+    <!-- Profile -->
+    <section class="mb-8">
+      <h2 class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-3">Profile</h2>
+      <p class="text-sm text-gray-700 leading-relaxed">
+        Information engineer with a strong foundation in hardware-adjacent disciplines — electronics, digital systems, microcontrollers, DSP, and signals — combined with hands-on professional experience in software QA, data engineering, and analytics. Technically rigorous, systems-oriented, and precise. Comfortable working across hardware and software layers, with a long-term focus on medical device and instrumentation systems. Multilingual (Spanish, English, German) with cross-cultural professional experience.
+      </p>
+    </section>
+
+    <!-- Education -->
+    <section class="mb-8">
+      <h2 class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-4">Education</h2>
+
+      <div class="mb-5">
+        <div class="flex justify-between items-baseline mb-1">
+          <h3 class="font-semibold">B.Sc. Information Engineering — HAW Hamburg</h3>
+          <span class="text-sm text-gray-500 shrink-0 ml-4">Nov 2020 – Feb 2026</span>
+        </div>
+        <p class="text-sm text-gray-600 mb-2">Grade: 1.9 (German scale) · Excellence Scholarship Recipient</p>
+        <p class="text-sm text-gray-600 mb-1"><span class="font-medium">Notable grades:</span> Digital Systems (15/15) · Neural Networks (15/15) · Digital Signal Processing (15/15) · Microcontroller (14/15) · Algorithms & Data Structures (14/15) · Software Engineering (13/15) · Electronics 2 (12/15) · Databases (12/15)</p>
+        <p class="text-sm text-gray-600"><span class="font-medium">Relevant coursework:</span> Electrical Engineering 1 & 2 · Electronics 1 & 2 · Digital Circuits · Digital Systems · Microcontroller · Bus Systems & Sensors · Signals & Systems 1 & 2 · Digital Signal Processing · Digital Communication Systems · Algorithms & Data Structures · Software Constructions 1 (C) & 2 (Java) · Software Engineering · Operating Systems · Databases · Neural Networks · Computer Graphics · Mathematics 1 & 2</p>
+      </div>
+
+      <div class="mb-5">
+        <div class="flex justify-between items-baseline mb-1">
+          <h3 class="font-semibold">Bachelor of Arts in Philology — English — National University of Colombia</h3>
+          <span class="text-sm text-gray-500 shrink-0 ml-4">Jun 2009 – Mar 2015</span>
+        </div>
+        <p class="text-sm text-gray-600">Grade: 4.4/5.0 · Relevant coursework: Research Methodology · Written & Oral Communication</p>
+      </div>
+    </section>
+
+    <!-- Bachelor Thesis -->
+    <section class="mb-8">
+      <h2 class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-4">Bachelor Thesis</h2>
+      <div>
+        <div class="flex justify-between items-baseline mb-1">
+          <h3 class="font-semibold">Transformer Network for the Forecasting of Energy Consumption</h3>
+          <span class="text-sm text-gray-500 shrink-0 ml-4">Grade: 14/15</span>
+        </div>
+        <ul class="text-sm text-gray-600 space-y-1 mt-2 list-disc list-inside">
+          <li>Trained 45 transformer-based time-series models using PyTorch, achieving average predictions within 2.7% of true electricity grid load values.</li>
+          <li>Aggregated error 25% lower than official SMARD benchmark, corresponding to potential economic impact exceeding €445M.</li>
+          <li>Evaluated performance using MAE and MAPE.</li>
+          <li>Best-performing model deployed as a production Streamlit application with a live SMARD API data pipeline.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Professional Experience -->
+    <section class="mb-8">
+      <h2 class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-4">Professional Experience</h2>
+
+      <div class="mb-6">
+        <div class="flex justify-between items-baseline mb-1">
+          <h3 class="font-semibold">Working Student in Corporate Audit Analytics — Hapag-Lloyd AG</h3>
+          <span class="text-sm text-gray-500 shrink-0 ml-4">Aug 2024 – Feb 2026</span>
+        </div>
+        <ul class="text-sm text-gray-600 space-y-1 mt-2 list-disc list-inside">
+          <li>Assumed end-to-end ownership of a Tableau-to-Qlik Sense migration across 7 dashboards following a project transition, including app development, data transformation, UAT management, production releases, and stakeholder communication across auditors, product owners, and senior management in 4 countries.</li>
+          <li>Resolved complex data accuracy issues across UAT cycles by independently tracing discrepancies to upstream sources and iteratively validating outputs against live system records.</li>
+          <li>Navigated a large, complex database schema with limited documentation, identifying foreign key patterns to enable accurate joins across 6 critical datasets.</li>
+          <li>Proposed and implemented a Databricks-native solution to bypass a file size constraint in the data pipeline, replacing two Alteryx workflows and establishing Databricks as the preferred data preparation approach going forward.</li>
+          <li>Reconstructed end-to-end business logic for inland container cost and revenue reconciliation, integrating data across multiple interdependent tables to deliver a validated Qlik Sense application.</li>
+          <li>Developed SQL-based analyses on Databricks supporting audit and compliance processes.</li>
+          <li>Led data literacy training for 15+ non-technical stakeholders across 4 countries.</li>
+        </ul>
+      </div>
+
+      <div class="mb-6">
+        <div class="flex justify-between items-baseline mb-1">
+          <h3 class="font-semibold">Software QA Engineer — NumberFour AG</h3>
+          <span class="text-sm text-gray-500 shrink-0 ml-4">Sep 2022 – Jun 2024</span>
+        </div>
+        <ul class="text-sm text-gray-600 space-y-1 mt-2 list-disc list-inside">
+          <li>Performed manual and automated testing of a complex multi-feature POS system including inventory management, e-commerce integration, and financial reporting modules.</li>
+          <li>Identified edge-case defects through exploratory testing, consistently uncovering system interaction bugs that fell outside standard test coverage.</li>
+          <li>Wrote and maintained automated test cases using a Java-based framework within a GitLab CI/CD pipeline, participating in code reviews and pull request workflows.</li>
+          <li>Managed test cases, test suites, and test execution in TestRail across agile sprint cycles and major release regression testing.</li>
+          <li>Tracked and linked all defects and feature coverage in JIRA across the full development lifecycle.</li>
+        </ul>
+      </div>
+
+      <div class="mb-6">
+        <div class="flex justify-between items-baseline mb-1">
+          <h3 class="font-semibold">Electrical Engineering Tutor — HAW Hamburg</h3>
+          <span class="text-sm text-gray-500 shrink-0 ml-4">Apr 2022 – Jul 2022</span>
+        </div>
+        <ul class="text-sm text-gray-600 space-y-1 mt-2 list-disc list-inside">
+          <li>Recruited directly by the course professor to tutor Electrical Engineering 1 & 2 for cohorts of 20–40 first-semester students.</li>
+          <li>Ran biweekly 3-hour sessions covering circuit analysis, Thévenin/Norton theorems, AC/DC concepts, and power systems.</li>
+          <li>Achieved consistently high attendance; received direct feedback that sessions were instrumental in students passing the course.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Earlier Experience -->
+    <section class="mb-8">
+      <h2 class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-4">Earlier Experience</h2>
+
+      <div class="mb-6">
+        <div class="flex justify-between items-baseline mb-1">
+          <h3 class="font-semibold">UN Volunteer – Human Rights Office — United Nations (Colombia)</h3>
+          <span class="text-sm text-gray-500 shrink-0 ml-4">Oct 2019 – Dec 2020</span>
+        </div>
+        <ul class="text-sm text-gray-600 space-y-1 mt-2 list-disc list-inside">
+          <li>Designed and delivered an English language training program for ~50 staff across Bogotá and satellite offices.</li>
+          <li>Developed a speaking assessment based on IELTS methodology to place staff into 5 proficiency levels; created all teaching materials per level.</li>
+          <li>Taught weekly intensive sessions across 5 levels simultaneously, adapting content to highly educated professionals working on complex human rights topics.</li>
+        </ul>
+      </div>
+
+      <div class="mb-6">
+        <div class="flex justify-between items-baseline mb-1">
+          <h3 class="font-semibold">English Teacher & Examiner — Cambridge, IELTS & other institutions</h3>
+          <span class="text-sm text-gray-500 shrink-0 ml-4">Jan 2014 – Oct 2019</span>
+        </div>
+        <ul class="text-sm text-gray-600 space-y-1 mt-2 list-disc list-inside">
+          <li>Taught English at multiple institutions covering general English (A1–C1) and exam preparation courses.</li>
+          <li>Conducted IELTS and Cambridge speaking examinations as a certified examiner.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="mb-8">
+      <h2 class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-4">Skills</h2>
+      <div class="text-sm text-gray-700 space-y-2">
+        <p><span class="font-medium">Hardware & Electronics:</span> Circuit analysis (AC/DC, Thévenin/Norton) · Digital systems & logic design · Microcontrollers · Bus systems & sensors · Digital Signal Processing · Signals & Systems · Digital communication systems</p>
+        <p><span class="font-medium">Programming & Tools (Proficient):</span> Python (pandas, NumPy, PyTorch, TensorFlow, matplotlib) · SQL · Databricks · Git · GitLab · Jupyter · Linux · Qlik Sense · JIRA · TestRail</p>
+        <p><span class="font-medium">Programming & Tools (Familiar):</span> Java · C · Docker · ROS · Alteryx · JavaScript</p>
+        <p><span class="font-medium">Machine Learning:</span> Neural networks & deep learning · Model training & validation · Time-series forecasting · Model evaluation (MAE/RMSE/MAPE)</p>
+        <p><span class="font-medium">QA & Testing:</span> Exploratory testing · Edge-case analysis · Test case design & management · Automated testing (Java framework) · CI/CD pipeline integration · Defect documentation</p>
+        <p><span class="font-medium">Analytics & Data:</span> Dashboard development (Qlik Sense) · Data validation & quality checks · BI migration · Workflow automation</p>
+      </div>
+    </section>
+
+    <!-- Languages -->
+    <section class="mb-8">
+      <h2 class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-4">Languages</h2>
+      <div class="text-sm text-gray-700 space-y-1">
+        <p><span class="font-medium">Spanish</span> — Native</p>
+        <p><span class="font-medium">English</span> — Fluent (TOEFL iBT: 117/120)</p>
+        <p><span class="font-medium">German</span> — B2 in progress</p>
+      </div>
+    </section>
+
+    <!-- Certifications -->
+    <section class="mb-8">
+      <h2 class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-4">Courses & Certifications</h2>
+      <ul class="text-sm text-gray-700 space-y-1">
+        <li class="flex justify-between"><span>Neural Networks and Deep Learning — DeepLearning.AI, Coursera</span><span class="text-gray-500">Jul 2025</span></li>
+        <li class="flex justify-between"><span>Improving Deep Neural Networks — DeepLearning.AI, Coursera</span><span class="text-gray-500">Aug 2025</span></li>
+        <li class="flex justify-between"><span>Qlik Sense Business Analyst Qualification — Qlik</span><span class="text-gray-500">Nov 2024</span></li>
+        <li class="flex justify-between"><span>Qlik Sense Data Architect Qualification — Qlik</span><span class="text-gray-500">Nov 2024</span></li>
+        <li class="flex justify-between"><span>Mathematics for Machine Learning: Linear Algebra — Imperial College London, Coursera</span><span class="text-gray-500">Jan 2024</span></li>
+        <li class="flex justify-between"><span>IELTS & Cambridge Speaking Examiner — British Council Colombia</span><span class="text-gray-500">Nov 2018 – Nov 2020</span></li>
+      </ul>
+    </section>
+
+  </article>
 </Layout>
+
+<style>
+  @media print {
+    .no-print {
+      display: none;
+    }
+    nav {
+      display: none;
+    }
+    article {
+      padding: 0;
+    }
+  }
+</style>
