@@ -4,7 +4,7 @@ summary: "Contributed to a ROS-based system for real-time detection and GPS loca
 status: published
 order: 3
 context: "University project — HAW Urban Mobility Lab / EDDY"
-cover: "/images/beacon-lsbg-demo.jpeg"
+cover: "/images/beacon.png"
 links:
   github: "https://github.com/PaoAndreCM/eddy_beacon_locator"
 tech:
