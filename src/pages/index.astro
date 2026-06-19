@@ -12,15 +12,24 @@ const previewProjects = allProjects
 <Layout title="Paola Carreno — Information Engineer">
 
   <!-- Hero -->
-  <section class="w-full min-h-screen bg-gray-900 text-white flex items-center">
-    <div class="max-w-6xl mx-auto px-6 py-24">
+  <section class="w-full bg-gray-900 text-white flex items-center py-24">
+    <div class="max-w-6xl mx-auto px-6">
       <h1 class="text-5xl font-bold mb-4">Hola, my name is Paola.</h1>
       <p class="text-2xl text-gray-300 mb-6">I'm an information engineer.</p>
-      <p class="text-lg text-gray-400 max-w-2xl leading-relaxed">
-        I work at the intersection of hardware-adjacent systems and software —
-        from signal processing and microcontrollers to data engineering and machine learning.
-        I build things that are precise, well-reasoned, and actually work.
+      <p class="text-lg text-gray-400 max-w-2xl leading-relaxed mb-10">
+        I spent over ten years as an English teacher in Colombia before moving to Hamburg
+        to study Information Engineering. I came to engineering late — and I think that
+        makes me better at it. I bring precision, genuine curiosity, and a deep commitment
+        to understanding things from first principles.
       </p>
+      <div class="flex gap-4">
+        <a href="/about" class="text-sm font-medium bg-white text-gray-900 px-5 py-2.5 rounded hover:bg-gray-100 transition-colors">
+          About Me
+        </a>
+        <a href="/resume" class="text-sm font-medium border border-gray-500 text-white px-5 py-2.5 rounded hover:border-gray-300 transition-colors">
+          See Resume
+        </a>
+      </div>
     </div>
   </section>
 
@@ -46,33 +55,6 @@ const previewProjects = allProjects
         See all projects →
       </a>
     </div>
-  </section>
-
-  <!-- Resume teaser -->
-  <section class="bg-gray-50 py-16">
-    <div class="max-w-6xl mx-auto px-6 flex items-center justify-between">
-      <div>
-        <h2 class="text-2xl font-bold mb-2">Resume</h2>
-        <p class="text-gray-600">Education, professional experience, and skills.</p>
-      </div>
-      <a href="/resume" class="text-sm font-medium bg-gray-900 text-white px-5 py-2.5 rounded hover:bg-gray-700 transition-colors">
-        See resume →
-      </a>
-    </div>
-  </section>
-
-  <!-- About me teaser -->
-  <section class="max-w-6xl mx-auto px-6 py-20">
-    <h2 class="text-2xl font-bold mb-6">About me</h2>
-    <p class="text-gray-600 max-w-2xl leading-relaxed mb-6">
-      I spent over ten years as an English teacher in Colombia before moving to Hamburg
-      to study Information Engineering. I came to engineering late — and I think that
-      makes me better at it. I bring precision, genuine curiosity, and a deep commitment
-      to understanding things from first principles.
-    </p>
-    <a href="/about" class="text-sm font-medium text-gray-900 hover:underline underline-offset-4">
-      Learn more about me →
-    </a>
   </section>
 
 </Layout>
